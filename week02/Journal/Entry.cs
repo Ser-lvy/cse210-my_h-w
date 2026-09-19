@@ -8,8 +8,8 @@ public class Entry
     {
         _date = date;
         _prompt = prompt;
-        _response = response;
-
+        _response= response;
+ 
     }
     public void Display()
     {
