@@ -11,25 +11,28 @@ class Program
         Video video1 = new Video("The Power of Habit", "Charles Duhigg", 600);
         video1.AddComment(new Comment("Great insights on habit formation!", "Alice"));
         video1.AddComment(new Comment("I love how this book changed my perspective.", "Bob"));
+        video1.AddComment(new Comment("Great Job!", "John"));
 
         videos.Add(video1);
 
         Video video2 = new Video("Learning C#", "Levi Malesh", 900);
         video2.AddComment(new Comment("Wow nice work", "John"));
         video2.AddComment(new Comment("Thank you so much, this content has helped me so much", "Jenny"));
+        video2.AddComment(new Comment("Very Hekpful", "Alexa"));
 
         videos.Add(video2);
 
         Video video3 = new Video("14th September", "Praise Nahabwe",1000);
         video3.AddComment(new Comment("Beautiful!", "Oliver"));
         video3.AddComment(new Comment("Loml!", "Levi"));
+        video3.AddComment(new Comment("So Beautiful","Levi" ));
 
         videos.Add(video3);
 
         foreach (Video video in videos)
         {
             Console.WriteLine($"Title: {video.GetTitle()}");
-            Console.WriteLine($"Author: {video.GetAuthor()}");
+            Console.WriteLine($"Creator: {video.GetCreator()}");
             Console.WriteLine($"Length: {video.GetLength()} seconds");
 
             

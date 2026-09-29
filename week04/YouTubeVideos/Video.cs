@@ -1,14 +1,14 @@
 public class Video
 {
     public string _title;
-    public string _author;
+    public string _creator;
     public int _lengthInSeconds;
     public List<Comment> _comments;
 
-    public Video(string title, string author, int lengthInSeconds)
+    public Video(string title, string creator, int lengthInSeconds)
     {
         _title = title;
-        _author = author;
+        _creator = creator;
         _lengthInSeconds = lengthInSeconds;
         _comments = new List<Comment>();
     }
@@ -20,9 +20,9 @@ public class Video
     {
         return _title;
     }
-    public string GetAuthor()
+    public string GetCreator()
     {
-        return _author;
+        return _creator;
     }
     public int GetLength()
     {
