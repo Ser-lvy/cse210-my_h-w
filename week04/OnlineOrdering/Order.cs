@@ -23,16 +23,27 @@ public class Order
         }
         return total;
     }
+    public string GetShippingLabel()
+    {
+        return _customer.DisplayCustomer();
+    }
     public void DisplayOrder()
     {
+        Console.WriteLine("ORDER DETAILS");
+        Console.WriteLine();
         _customer.DisplayCustomer();
-        Console.WriteLine("Products:");
+        
 
         foreach (Product product in _products)
         {
             product.DisplayProduct();
+            Console.WriteLine(product.GetPackagingLabel());
+            Console.WriteLine();
+            
 
         }
+        Console.WriteLine("SHIPPING DETAILS");
+        Console.WriteLine(GetShippingLabel());
         Console.WriteLine($"Total: ${GetTotal():0.00}");
     }
     

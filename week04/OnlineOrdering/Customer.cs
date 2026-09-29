@@ -9,10 +9,10 @@ public class Customer
         _address = address;
 
     }
-    public void DisplayCustomer()
+    public string DisplayCustomer()
     {
-        Console.WriteLine($"Customer: {_nameOfCustomer}");
-        Console.WriteLine($"Address: {_address.GetFullAddress()}");
+        return $"Customer: {_nameOfCustomer}\nAddress: {_address.GetFullAddress()}";
+        
 
     }
 }
